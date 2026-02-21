@@ -1,0 +1,97 @@
+Punto 1
+int M[100][1000];
+
+struct sColumna{
+    int columna,
+        numero;
+};
+
+struct sNodoColumna{
+    sColumna dato;
+    sNodoColumna siguiente;
+};
+
+sNodoColumna lista[100];
+
+Punto 2
+Nodo Insertar(int Fila, int Columna, int Valor, NodoV[]){
+sNodoLista Insertar(int Fila, int Columna, int Valor, sNodoListalista[]){
+
+    sColumna columna;
+
+    for(int i = 0; i  100; i++){
+        for(int j = 0; j  1000){
+            if(M[i][j] != 0){
+                columna.columna = j;
+                columna.numero = M[i][j];
+
+                InsertarNodo(lista, i, columna);
+            }
+        }
+    }
+}
+
+void InsertarNodo(sNodoLista lista[], int fila, sColumna dato){
+    
+    if(!BuscarFila(lista, fila)){
+
+    }
+}
+
+
+sNodoColumna Insertar(int Fila, int Columna, int Valor, sNodoColumnalista[]){
+
+    sNodoColumna aux = new sNodoColumna();
+    aux-columnaConDato.columna = Columna;
+    aux-columnaConDato.numero = Valor;
+    lista[Fila] = aux;
+    lista[Fila] = lista[Fila]-siguiente;
+
+    return lista;
+}
+
+Punto 3
+int buscar(sNodoColumna lista[], int valor){
+    int direccionDeMemoria = NULL;
+
+    for(int i = 0; i  100; i++){
+        while(lista[i]){
+            if(valor == lista[i]-dato.numero){
+                direccionDeMemoria = &lista[i]-dato.numero;
+            }
+        lista[i] = lista[i]-siguiente;
+        }
+    }
+
+    return direccionDeMemoria;
+}
+
+Punto 4
+main(){
+    const int N = 100, M = 1000;
+    sNodoColumna lista = NULL;
+    sNodoColumna lista[N];
+
+    int Matriz[N][M];
+
+    Matriz = seCargaMagicamenteLaMatrizComoEstaEnElEnunciado(Matriz, N, M);
+
+    lista = leoLaMatrizYCargoDatos(Matriz, N, M, lista);
+
+    return 0;
+}
+
+sNodoColumna leoLaMatrizYCargoDatos(int M[][], int fila, int columna, sNodoColumna lista){
+
+    for(int i = 0; i  fila; i++){
+        for(int j = 0; j  columna; j++){
+            if(M[i][j] != 0){
+                lista = Insertar(i, j, M[i][j], lista);
+            }
+        }
+    }
+    return lista;
+}
+
+Punto 5
+En este caso, si los numeros no significativos además del 0 son los numeros negativos, tendría que modificar la condición del if de leoLaMatrizYCargoDatos por if(M[i][j]  0)
